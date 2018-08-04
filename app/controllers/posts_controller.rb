@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	
 	def index
 		@posts = Post.all
 	end
@@ -28,4 +29,5 @@ class PostsController < ApplicationController
 	  @post.update(title: params[:title], description: params[:description])
 	  redirect_to post_path(@post)
 	end
+	
 end
